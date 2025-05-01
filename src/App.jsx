@@ -2,6 +2,8 @@ import './App.css'
 import { Form } from './pages/Form';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { UseContext } from './pages/UseContext';
+import { UseReducer } from './pages/UseReducer';
+import { UseMemo } from './pages/UseMemo';
 
 function App() {
 
@@ -16,7 +18,8 @@ function App() {
         </Route>
         <Route path="/hooks">
           <Route path='useContext' element={<UseContext />} />
-          <Route path="blogs" element={<h1>Blogs</h1>} />
+          <Route path="useReducer" element={<UseReducer/>} />
+          <Route path='useMemo' element={<UseMemo/>}/>
           <Route path="*" element={<h1>No Page</h1>} />
         </Route>
       </Routes>
