@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { UseContext } from './pages/UseContext';
 import { UseReducer } from './pages/UseReducer';
 import { UseMemo } from './pages/UseMemo';
+import UseRef from './components/UseRef';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path='useContext' element={<UseContext />} />
           <Route path="useReducer" element={<UseReducer/>} />
           <Route path='useMemo' element={<UseMemo/>}/>
+          <Route path='useRef' element={<UseRef/>}/>
           <Route path="*" element={<h1>No Page</h1>} />
         </Route>
       </Routes>
