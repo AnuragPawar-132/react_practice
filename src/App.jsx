@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { UseContext } from './pages/UseContext';
 import { UseReducer } from './pages/UseReducer';
 import { UseMemo } from './pages/UseMemo';
-import UseRef from './components/UseRef';
+import UseRef from './pages/UseRef';
 
 function App() {
 

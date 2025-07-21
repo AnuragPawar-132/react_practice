@@ -1,18 +1,26 @@
 import React, { useReducer } from "react";
-import { reducer, initialState } from "../components/Reducer";
 
 export const UseReducer = () => {
 
+    let initialState = { count: 0 };
+
+    const reducer = (state, action) => {
+        switch (action.type) {
+            case 'increment': return { count: state.count + 1 }
+            case 'decrement': return { count: state.count - 1 }
+            default: return state
+        }
+    }
     const [state, dispatch] = useReducer(reducer, initialState)
     return (
         <div>
             <h1>Hi from UseReducer</h1>
             <p className="text-bold">Count: {state.count}</p>
-            <button className="bg-[#808080] p-[2%] m-2" onClick={()=>dispatch({type:'increment'})}>+</button>
-            <button className="bg-[#808080] p-[2%] m-2" onClick={()=>dispatch({type:'decrement'})}>-</button>
+            <button className="bg-[#808080] p-[2%] m-2" onClick={() => dispatch({ type: 'increment' })}>+</button>
+            <button className="bg-[#808080] p-[2%] m-2" onClick={() => dispatch({ type: 'decrement' })}>-</button>
         </div>
     )
-} 
+}
 
 
 
@@ -20,6 +28,32 @@ export const UseReducer = () => {
 // import { formReducer, initialState } from './reducer';
 
 // export const UseReducerForm = () => {
+
+//     const initialForm = {
+//     name: '',
+//     email: '',
+//     age: '',
+//     submitted: false
+//   };
+  
+// const formReducer = (state, action) => {
+//     switch (action.type) {
+//       case 'UPDATE_FIELD':
+//         return {
+//           ...state,
+//           [action.field]: action.value,
+//         };
+//       case 'RESET':
+//         return initialForm;
+//       case 'SUBMIT':
+//         return {
+//           ...state,
+//           submitted: true,
+//         };
+//       default:
+//         return state;
+//     }
+//   };
 //   const [state, dispatch] = useReducer(formReducer, initialState);
 
 //   const handleChange = (e) => {
