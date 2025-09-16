@@ -6,6 +6,7 @@ import { UseReducer } from './pages/UseReducer';
 import { UseMemo } from './pages/UseMemo';
 import UseRef from './pages/UseRef';
 import { MouseAction } from './pages/MouseAction';
+import Parent from './pages/useImperativeHandle/parent';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="useReducer" element={<UseReducer/>} />
           <Route path='useMemo' element={<UseMemo/>}/>
           <Route path='useRef' element={<UseRef/>}/>
+          <Route path='useImperativeHandle' element={<Parent/>}/>
           <Route path="*" element={<h1>No Page</h1>} />
         </Route>
       </Routes>
