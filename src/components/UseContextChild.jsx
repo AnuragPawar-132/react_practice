@@ -3,7 +3,8 @@ import LightThemeContext from './LightThemeContext';
 
 export const UseContextChild =  () => {
 
-    const lightTheme = useContext(LightThemeContext)
+    const lightTheme = useContext(LightThemeContext);
+    console.log("lightTheme", lightTheme);
 
     return(
         <div className={`${lightTheme ? 'bg-[white] text-[#00000]' : 'bg-[#000000] text-[white]'}  p-[10%]`} >

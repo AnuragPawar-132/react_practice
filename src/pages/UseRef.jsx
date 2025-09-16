@@ -15,6 +15,7 @@ const UseRef = () => {
             alert("Form Submitted")
         }else{
             inputRef.current.focus();
+            console.log(inputRef.current)
             setMessage("Password must be atleast 5 characters")
         }
     }

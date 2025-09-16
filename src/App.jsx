@@ -19,13 +19,13 @@ function App() {
           <Route path='mouse' element={<MouseAction/>}/>
           <Route path="*" element={<h1>No Page</h1>} />
         </Route>
-        {/* <Route path="/hooks">
-          <Route path='/useContext' element={<UseContext />} />
-          <Route path="/useReducer" element={<UseReducer/>} />
-          <Route path='/useMemo' element={<UseMemo/>}/>
-          <Route path='/useRef' element={<UseRef/>}/>
+        <Route path="/hooks">
+          <Route path='useContext' element={<UseContext />} />
+          <Route path="useReducer" element={<UseReducer/>} />
+          <Route path='useMemo' element={<UseMemo/>}/>
+          <Route path='useRef' element={<UseRef/>}/>
           <Route path="*" element={<h1>No Page</h1>} />
-        </Route> */}
+        </Route>
       </Routes>
     </BrowserRouter>
 

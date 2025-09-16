@@ -9,7 +9,6 @@ export const reducer = (state, action) => {
 }
 
 // another example of reducer : formReducer
-
 export const initialForm = {
     name: '',
     email: '',
